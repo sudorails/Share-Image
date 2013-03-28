@@ -1,0 +1,19 @@
+
+<p>
+ <% if @image.photo.exists? then %>
+   <%= image_tag @image.photo.url(:large) %>
+<% end %>
+</p>
+<p>
+  <b>Tag line:</b>
+  <%= @image.tag_line %>
+</p>
+
+<p>
+  <b>Owner:</b>
+  <%= @image.user.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

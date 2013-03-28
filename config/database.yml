@@ -1,0 +1,23 @@
+development:
+  adapter: mysql2
+  database: share_album_development
+  username: root
+  password: safew
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: mysql2
+  database: share_album_test
+  username: root
+  password: safew
+  pool: 5
+  timeout: 5000
+
+production:
+  adapter: mysql2
+  database: share_album_production
+  username: root
+  password: safew 
+  pool: 5
+  timeout: 5000

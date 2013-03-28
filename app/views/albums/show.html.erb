@@ -1,0 +1,14 @@
+<h2><%= @album.album_title %></h2> - by <small> <%= @album.user.full_name %></small>
+<br><br>
+
+<% @images.each do |i| %>
+ <% if i.photo.exists? then %>
+   <%= link_to image_tag(i.photo.url(:thumb)), i %>
+<% end %>
+<% end %>
+
+<hr>
+<% if user_signed_in? %>
+<h4> Add more images to <%= @album.album_title %><h4><hr>
+<%= render "images/form" %>
+<% end %>

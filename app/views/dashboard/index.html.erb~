@@ -1,0 +1,8 @@
+<h1><i> Welcome To Share album! </i></h1><br>
+
+
+<% @albums.each do |image| %>
+  <%= link_to image_tag(image.photo.url(:thumb)), image %>
+  <b><%= link_to album.user.full_name %><b><br><br><br>
+<% end %>
+

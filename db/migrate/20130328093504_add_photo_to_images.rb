@@ -1,0 +1,7 @@
+class AddPhotoToImages < ActiveRecord::Migration
+  def change
+    add_column :images, :photo_file_name, :string, :default => "N/A"
+    add_column :images, :photo_content_type, :string, :default => "N/A"
+    add_column :images, :photo_file_size, :integer
+  end
+end
