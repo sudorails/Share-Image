@@ -2,15 +2,11 @@ Application Name :Share Image
 
 Technologies used : 
 
-Rails-version :  3.2.13
-
-ruby-version : 1.9.3
-
-for image upload  : paperclip 
-
-for authentication : Devise
-
-for ui : twitter-bootstrap-rails
+Rails-version :  3.2.13 | 
+ruby-version : 1.9.3 | 
+for image upload  : paperclip  | 
+for authentication : Devise | 
+for ui : twitter-bootstrap-rails | 
 
 friendly_id is used for making the album title slug 
 
