@@ -15,8 +15,7 @@ class User < ActiveRecord::Base
 
   def image_count
    self.albums.each do |album|
-    puts album.images.size 
-     if a.images.size>25
+     if album.images.size>25
       errors.add(:images, "limit exceded")
      end
    end
