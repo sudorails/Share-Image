@@ -1,9 +1,0 @@
-<h1><i> Welcome To Share album! </i></h1><br>
-<%= User.current.inspect %>
-
-<% @images.each do |image| %>
-  <% unless image.album.blank? %><%= link_to image_tag(image.photo.url(:thumb)), image %><% end %><br><br>
-  <small> Owner - <%= image.user.full_name %> | 
-  <%= time_tag image.created_at %> </small><br><br><br>
-<% end %>
-

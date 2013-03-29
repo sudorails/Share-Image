@@ -1,8 +1,0 @@
-class ProfilesController < ApplicationController
-  def show 
-   @my_albums = Album.find_all_by_user_id(current_user)
-     @my_albums.each do |album|
-       @my_images = album.images.find_all_by_user_id(current_user).count
-     end
-  end
-end
