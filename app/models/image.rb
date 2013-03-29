@@ -9,11 +9,6 @@ class Image < ActiveRecord::Base
        :large => "800x600" 
                 }
 
-   validate :count_images_in_album , :on=> :create
 
-   def count_images_in_album
-    
-   end
-  
 
 end

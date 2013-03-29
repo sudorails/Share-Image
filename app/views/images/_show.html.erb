@@ -15,5 +15,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_image_path(@image) %> |
-<%= link_to 'Back', images_path %>
+<% if user_signed_in? %><%= link_to 'Edit', edit_image_path(@image) %> |<% end %>
+<%= link_to 'Back to album', album_path(@image.album) %>

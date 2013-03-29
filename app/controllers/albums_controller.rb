@@ -15,8 +15,10 @@ class AlbumsController < ApplicationController
   # GET /albums/1.json
   def show
     @album = Album.find(params[:id])
-    @images = Image.find_all_by_album_id(@album)
     @image = Image.new
+    @album.image_count
+    @images = Image.find_all_by_album_id(@album)
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @album }

@@ -35,6 +35,7 @@ class ImagesController < ApplicationController
   # GET /images/1/edit
   def edit
     @image = Image.find(params[:id])
+    @album = @image.album
   end
 
   # POST /images
@@ -47,7 +48,7 @@ class ImagesController < ApplicationController
         format.html { redirect_to @image.album, notice: 'Image was successfully created.' }
         format.json { render json: @image, status: :created, location: @image }
       else
-        format.html { redirect_to root_url }
+        format.html { redirect_to root_url, notice: 'unprocessable_entity.' }
         format.json { render json: @image.errors, status: :unprocessable_entity }
       end
     end

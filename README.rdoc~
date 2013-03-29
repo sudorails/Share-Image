@@ -45,7 +45,6 @@ Dashboard :
 
 
 validations 
-  1: no album can be created/edited/updated/deleted unless the user in logged in 
-  2: no image is created/edited/updated/deleted unless the user in logged in
-  3: user can not create more than 25 images per album.
-
+  1: no album can be created unless the user in logged in 
+  2: no image is created unless the user in logged in
+  3:

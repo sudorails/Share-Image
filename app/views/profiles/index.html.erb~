@@ -1,7 +1,7 @@
 <h1> Albums </h1>
 <body>
-<% if @albums.any?%>
-<% @albums.each do |album| %>
+<% if @my_album.any?%>
+<% @my_album.each do |album| %>
   <% unless album.images.blank? %>
      <%= link_to image_tag(album.images.first.photo.url(:thumb)), album %>
   <% else %>

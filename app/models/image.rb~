@@ -8,11 +8,8 @@ class Image < ActiveRecord::Base
        :thumb => "100x100",
        :large => "800x600" 
                 }
+  validates_presence_of :album, :message => "upload atleast one Album"
 
-   validate :count_images_in_album , :on=> :create
 
-   def count_images_in_album
-   end
-  
 
 end

@@ -1,6 +1,7 @@
 class Album < ActiveRecord::Base
   attr_accessible :album_title, :user_id
-  has_many :images
+  has_many :images, :dependent => :destroy
+  validates_associated :images
   belongs_to :user
 
   extend FriendlyId
@@ -11,12 +12,10 @@ class Album < ActiveRecord::Base
   validates_presence_of :album_title
   validates_uniqueness_of :album_title
    
-  validate :images_count_valid?
 
-  IMAGE_COUNT = 5
-   def images_count_valid?
-     if self.images.size>IMAGE_COUNT
-      errors.add(:base, 'limit')
+  def image_count
+   if self.user.images.size > 25
+    errors.add(:images, "limit exceded")
    end
   end
 

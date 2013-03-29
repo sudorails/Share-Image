@@ -1,4 +1,5 @@
 ShareAlbum::Application.routes.draw do
+  resources :profiles
   resources :images
   resources :albums
   devise_for :users
